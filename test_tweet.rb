@@ -4,7 +4,7 @@ require 'typhoeus'
 require 'oauth/request_proxy/typhoeus_request'
 
 # fetch credentials
-if File.exists?('credentials.json')
+if File.exist?('credentials.json')
   credentials = JSON.parse(File.read('credentials.json'))
 else
   abort 'First generate credentials by running "ruby generate_credentials.rb"'
